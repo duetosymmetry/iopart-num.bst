@@ -605,7 +605,7 @@ FUNCTION {format.eprint}
 { eprint duplicate$ empty$
     'skip$
     { 
-      "(\textit{Preprint} " 
+      "["
       swap$
        "\eprint"
       archive empty$
@@ -614,7 +614,7 @@ FUNCTION {format.eprint}
       if$
       "{" * swap$ * "}" *
       *
-      ")"
+      "]"
       *
     }
   if$
@@ -1702,7 +1702,7 @@ FUNCTION {begin.bib}
   write$ newline$
   "\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi"
   write$ newline$
-  "\providecommand{\eprint}[2][]{\url{#2}}"
+  "\providecommand{\eprint}[2][]{\href{http://arxiv.org/abs/#2}{arXiv:#2}}"
   write$ newline$
   "% Bibliography created with iopart-num v2.1"
   write$ newline$
