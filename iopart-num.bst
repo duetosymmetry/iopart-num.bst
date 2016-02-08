@@ -105,6 +105,7 @@ ENTRY
     booktitle
     chapter
     collaboration
+    doi
     edition
     editor
     eid
@@ -616,6 +617,25 @@ FUNCTION {format.eprint}
       *
       "]"
       *
+    }
+  if$
+}
+
+FUNCTION {format.doiBegin}
+{ doi empty$
+    { "" }
+    {
+       "\href{http://dx.doi.org/" doi * "}{" *
+    }
+  if$
+}
+
+FUNCTION {format.doiEnd}
+{
+  doi empty$
+    { "" }
+    {
+      "}"
     }
   if$
 }
@@ -1335,6 +1355,7 @@ FUNCTION {article}
   format.authors "author" output.check
   format.date "year" output.check
   date.block
+  format.doiBegin output
   crossref missing$
     {
 %mc add section handling
@@ -1360,6 +1381,7 @@ FUNCTION {article}
       format.pages output
     }
   if$
+  format.doiEnd output
   format.issn output
   format.note output
   format.eprint output
