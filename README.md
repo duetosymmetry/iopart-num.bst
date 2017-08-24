@@ -1,5 +1,5 @@
 # iopart-num.bst
-Improved version of Mark Caprio's BibTeX style file `iopart-num.bst`
+Improved version of Mark Caprio's BibTeX style file `iopart-num.bst`, for IOP style articles.
 
 The official source for `iopart-num.bst` is [here on the CTAN](https://www.ctan.org/tex-archive/biblio/bibtex/contrib/iopart-num).
 
