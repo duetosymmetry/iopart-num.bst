@@ -7,4 +7,4 @@ However, at the time of writing, this official BibTeX style file has two issues:
 1. ArXiv eprints get emitted with wrong URLs
 2. DOIs are not linked
 
-Here I address both issues. Just drop the file `iopart-num.bst` into your directory, and make sure your document has `\usepackage[options...]{hyperref}` in the preamble.
+Here I address both issues. Just drop the file [`iopart-num.bst`](iopart-num.bst) into your directory, and make sure your document has `\usepackage[options...]{hyperref}` in the preamble.
